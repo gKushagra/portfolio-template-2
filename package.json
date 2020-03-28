@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-template-1",
+  "version": "1.0.0",
+  "description": "sample portfolio template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gKushagra/portfolio-template-2.git"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "personal",
+    "website"
+  ],
+  "author": "Kushagra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gKushagra/portfolio-template-2/issues"
+  },
+  "homepage": "https://github.com/gKushagra/portfolio-template-2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.2"
+  }
+}
