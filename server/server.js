@@ -1,13 +1,15 @@
 const express = require('express');
 const path = require('path');
+const routes = require('../routes/home');
 
 const app = express();
 
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views/index.html'));
-});
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../views'));
+
+app.use('/', routes());
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
