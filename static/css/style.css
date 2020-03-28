@@ -1,0 +1,110 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.row {
+  padding: 20px;
+}
+
+/* Navigation CSS */
+#nav-row {
+  display: block;
+  text-align: right;
+  padding: 10px 10px 10px 10px;
+  margin: 15px 10px 15px 10px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+
+#nav-list {
+  list-style-type: none;
+  padding: 10px;
+  display: inline;
+  margin: 10px;
+}
+
+li {
+  display: inline;
+  padding: 10px;
+}
+
+li a {
+  color: #666666;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #339999;
+  text-decoration: none;
+}
+
+/* End of navigation styling */
+
+/* Home page content styling */
+#intro {
+  margin-bottom: 50px;
+}
+
+#name {
+  color: #339999;
+  font-size: 42px;
+  margin: 50px 10px 10px 10px;
+}
+
+#headline {
+  color: #666666;
+  font-size: 24px;
+  margin: 10px 10px 10px 10px;
+}
+
+#summary-row {
+  padding-top: 50px;
+}
+
+#summary {
+  color: black;
+  font-size: 16px;
+  margin: 10px 5px 10px 5px;
+  /*background: #efefef;*/
+  padding: 25px 20px 25px 20px;
+  /*border: 1px solid #efefef;
+  border-radius: 5px;*/
+}
+
+#social-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px 10px 10px 10px;
+}
+
+#linkedin,
+#github {
+  padding: 10px;
+}
+
+hr {
+  color: #f1f1f1;
+  margin: 0;
+}
+
+#skillset-row {
+  margin-top: 100px;
+}
+
+#skill {
+  padding-top: 25px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+
+#skill-name {
+  margin: 0;
+}
+
+#heading-skill {
+  font-size: 28px;
+  color: #339999;
+  text-align: center;
+}
+
+

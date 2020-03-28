@@ -1,0 +1,47 @@
+{
+  "name": "Kushagra Gupta",
+  "headline": "Full Stack Software Engineer & UI/UX Enthusiast",
+  "linkedin": "http://",
+  "github": "http://",
+  "address": "Dallas, Texas",
+  "summary": [
+    "I am a self-motivated individual, enthusiastic and eager to learn new tech! I am interested in Fullstack application development, building enterprise applications, applying OOP techniques and best practices followed in the software industry. I also take interest in UI/UX research.\n",
+    "I have an inclination towards working for startups as I believe It would provide me with an opportunity to work on large scale projects alongside a small team of enthusiastic and innovative engineers, and my contribution would be much more significant.\n",
+    "Apart from coursework, I take out time to work on my project ideas, learn new languages, frameworks, and best practices, that I can integrate into the coding web in my head.\n"
+  ],
+  "school": {
+    "name": "The University of Texas at Dallas",
+    "course": "Master of Science in Computer Science",
+    "gradYear": "Spring 2021",
+    "gpa": "3.23/4.0"
+  },
+  "courses": ["Data Structures and Algorithm Analysis", "Machine Learning"],
+  "skillset": [
+    {
+      "skill": "React",
+      "proficiency": "80"
+    },
+    {
+      "skill": "Angular",
+      "proficiency": "70"
+    }
+  ],
+  "projects": [
+    {
+      "title": "React app",
+      "description": "MERN app",
+      "technologies": ["Node", "React", "MongoDB"],
+      "githubLink": "http://",
+      "website": "http://",
+      "imageLink": "http://"
+    },
+    {
+      "title": "Angular app",
+      "description": "MEAN app",
+      "technologies": ["Node", "Angular", "MongoDB"],
+      "githubLink": "http://",
+      "website": "http://",
+      "imageLink": "http://"
+    }
+  ]
+}
