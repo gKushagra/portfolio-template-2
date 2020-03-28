@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/gKushagra/portfolio-template-2#readme",
   "dependencies": {
+    "cookie-session": "^1.4.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1"
   },

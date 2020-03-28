@@ -1,14 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="row" id="intro">
+    <div class="col-md-6">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pageTitle %> </title>
-</head>
+    </div>
+    <div class="col-md-6">
+        <p id="name">
+            <%= profileInformation.name %>
+        </p>
+        <p id="headline">
+            <%= profileInformation.headline %>
+        </p>
+        <br>
+        <ul id="social-links">
+            <li id="linkedin">
+                <a href="https://www.linkedin.com/in/kushagragupta95/">
+                    <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
+            </li>
+            <li id="github">
+                <a href="https://github.com/gKushagra">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-<body>
-    <h1>Hello!</h1>
-</body>
+<div class="row" id="summary-row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <p id="summary">
+            <% profileInformation.summary.forEach(element => {%>
+            <%= element %><br><br>
+            <% }); %>
+        </p>
+    </div>
+    <div class="col-md-1"></div>
+</div>
 
-</html>
+<div class="row" id="skillset-row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" id="skill">
+        <p id="heading-skill">Skills</p>
+        <% profileInformation.skillset.forEach(element => { %>
+        <p id="skill-name"><%= element.skill %></p>
+        <div class="progress" id="dynamic">
+            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"><%= element.proficiency %>%</div>
+        </div> <br>
+        <% }); %>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<div class="row" id="projects-row">
+    <% profileInformation.projects.forEach(element => { %>
+    <div class="col-md-3" id="project-box">
+        <img src="#" alt="Image">
+        <p id="project-title"><%= element.title %></p>
+        <p id="description"><%= element.description %></p>
+        <i class="fab fa-github"></i>
+        <p id="technologies">
+            <% element.technologies.forEach(tech => {%>
+            <%= tech %>
+            <% }); %>
+        </p>
+    </div>
+    <div class="col-md-1"></div>
+    <% }); %>
+</div>
