@@ -13,7 +13,7 @@ const contactService = new ContactService(path.join(__dirname, '../files/contact
 
 const app = express();
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 // let cumulativeVisit = 0;
 
 app.use(express.static(path.join(__dirname, '../static')));
@@ -51,7 +51,7 @@ app.use(
   })
 );
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Server started on port: ${port}`);
 });
