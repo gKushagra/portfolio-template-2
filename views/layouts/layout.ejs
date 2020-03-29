@@ -39,8 +39,31 @@
 
     <%- include(`${template}`) %>
 
+    <footer>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <hr>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row" id="footer">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="footer-message">
+                <i class="far fa-copyright" id="copyright-logo"></i>
+                <p id="footer-name">Kushagra Gupta</p>
+                <p id="datetime"></p>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </footer>
 
 
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+    </script>
     <script src="https://kit.fontawesome.com/73e9654a1b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
