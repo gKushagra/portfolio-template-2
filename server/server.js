@@ -13,8 +13,8 @@ const contactService = new ContactService(path.join(__dirname, '../files/contact
 
 const app = express();
 
-const port = 3000;
-let cumulativeVisit = 0;
+const port = 5000;
+// let cumulativeVisit = 0;
 
 app.use(express.static(path.join(__dirname, '../static')));
 
@@ -36,7 +36,7 @@ app.use(async (req, res, next) => {
   try {
     const profileInfo = await profileDataService.getProfileData();
     res.locals.profileInformation = profileInfo;
-    console.log(res.locals);
+    // console.log(res.locals);
     return next();
   } catch (error) {
     return next(error);
@@ -48,11 +48,10 @@ app.use(
   routes({
     profileDataService,
     contactService,
-    cumulativeVisit,
   })
 );
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   // eslint-disable-next-line no-console
   console.log(`Server started on port: ${port}`);
 });
