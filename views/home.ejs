@@ -25,6 +25,22 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <hr>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="row" id="aboutme">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <p id="heading-skill">About Me</p>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
 <div class="row" id="summary-row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
@@ -37,10 +53,25 @@
     <div class="col-md-1"></div>
 </div>
 
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <hr>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="row" id="skills">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <p id="heading-skill">Skills</p>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
 <div class="row" id="skillset-row">
     <div class="col-md-3"></div>
     <div class="col-md-6" id="skill">
-        <p id="heading-skill">Skills</p>
         <% profileInformation.skillset.forEach(element => { %>
         <p id="skill-name"><%= element.skill %></p>
         <div class="progress" id="dynamic">
@@ -52,19 +83,36 @@
     <div class="col-md-3"></div>
 </div>
 
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <hr>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="row" id="proj">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <p id="heading-skill">Projects</p>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
 <div class="row" id="projects-row">
     <% profileInformation.projects.forEach(element => { %>
     <div class="col-md-3" id="project-box">
-        <img src="#" alt="Image">
+        <div class="row" id="image">
+            <img src="/images/login-portal.JPG" alt="Image">
+        </div>
         <p id="project-title"><%= element.title %></p>
         <p id="description"><%= element.description %></p>
-        <i class="fab fa-github"></i>
         <p id="technologies">
             <% element.technologies.forEach(tech => {%>
             <%= tech %>
             <% }); %>
         </p>
+        <i class="fab fa-github fa-2x"></i>
     </div>
-    <div class="col-md-1"></div>
     <% }); %>
 </div>
