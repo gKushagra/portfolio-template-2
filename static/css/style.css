@@ -7,11 +7,14 @@ body {
 }
 
 /* Navigation CSS */
+#navigation {
+  padding: 5px 5px 5px 5px;
+}
+
 #nav-row {
   display: block;
   text-align: right;
   padding: 10px 10px 10px 10px;
-  margin: 15px 10px 15px 10px;
   border: 1px solid #efefef;
   border-radius: 5px;
 }
@@ -41,10 +44,6 @@ li a:hover {
 /* End of navigation styling */
 
 /* Home page content styling */
-#intro {
-  margin-bottom: 50px;
-}
-
 #name {
   color: #339999;
   font-size: 42px;
@@ -55,10 +54,6 @@ li a:hover {
   color: #666666;
   font-size: 24px;
   margin: 10px 10px 10px 10px;
-}
-
-#summary-row {
-  padding-top: 50px;
 }
 
 #summary {
@@ -82,15 +77,6 @@ li a:hover {
   padding: 10px;
 }
 
-hr {
-  color: #f1f1f1;
-  margin: 0;
-}
-
-#skillset-row {
-  margin-top: 100px;
-}
-
 #skill {
   padding-top: 25px;
   border: 1px solid #efefef;
@@ -105,6 +91,51 @@ hr {
   font-size: 28px;
   color: #339999;
   text-align: center;
+  margin: 0;
 }
 
+#intro,
+#summary-row,
+#skillset-row,
+#projects-row {
+  padding: 25px 25px 25px 25px;
+}
 
+#project-box {
+  padding: 15px;
+  margin-left: 100px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  #project-box {
+    margin-left: 25px;
+  }
+}
+
+#project-title {
+  font-size: 24px;
+}
+
+#description {
+  font-size: 18px;
+}
+
+#technologies {
+  font-size: 20px;
+}
+
+#aboutme,
+#skills,
+#proj {
+  padding-top: 25px;
+}
+
+img {
+  width: 320px;
+  height: 240px;
+}
+#image {
+  text-align: center;
+}
