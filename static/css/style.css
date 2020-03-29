@@ -15,11 +15,13 @@ body {
   display: block;
   text-align: right;
   padding: 10px 10px 10px 10px;
-  border: 1px solid #efefef;
+  border: 1px solid #f9f9f9;
   border-radius: 5px;
+  background: #f9f9f9;
 }
 
-#nav-list {
+#nav-list,
+#errors-list {
   list-style-type: none;
   padding: 10px;
   display: inline;
@@ -138,4 +140,24 @@ img {
 }
 #image {
   text-align: center;
+}
+
+/* Form styling */
+#feedback-form-name,
+#feedback-form-email,
+#feedback-form-title,
+#feedback-form-message {
+  width: 360px;
+}
+
+#contact-form {
+  padding: 25px 25px 25px 25px;
+  border: 1px solid #efefef;
+  background: #f9f9f9;
+}
+
+#copyright-logo,
+#footer-name,
+#datetime {
+  display: inline;
 }

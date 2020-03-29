@@ -25,7 +25,7 @@ module.exports = (params) => {
     // res.render('home', { pageTitle: 'Profile' });
   });
 
-  router.use('/contact', contactRoute());
+  router.use('/contact', contactRoute(params));
 
   return router;
 };
