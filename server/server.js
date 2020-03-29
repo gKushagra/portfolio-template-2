@@ -1,12 +1,15 @@
 const express = require('express');
 const path = require('path');
 const cookieSession = require('cookie-session');
+const bodyParser = require('body-parser');
 const routes = require('../routes/home');
 const ProfileDataService = require('../services/ProfileDataService');
+const ContactService = require('../services/ContactService');
 
 const profileDataService = new ProfileDataService(
   path.join(__dirname, '../files/profileData.json')
 );
+const contactService = new ContactService(path.join(__dirname, '../files/contactData.json'));
 
 const app = express();
 
@@ -23,6 +26,8 @@ app.use(
     keys: ['Ronaldo1234', 'Michael11209'],
   })
 );
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
@@ -42,6 +47,7 @@ app.use(
   '/',
   routes({
     profileDataService,
+    contactService,
     cumulativeVisit,
   })
 );

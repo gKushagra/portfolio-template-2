@@ -20,7 +20,8 @@ body {
   background: #f9f9f9;
 }
 
-#nav-list {
+#nav-list,
+#errors-list {
   list-style-type: none;
   padding: 10px;
   display: inline;

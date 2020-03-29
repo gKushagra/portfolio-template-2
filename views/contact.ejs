@@ -9,25 +9,40 @@
             <div class="col-md-4"></div>
 
             <div class="com-md-4" id="contact-form">
-                <form class="feedback-form">
+                <% if(locals.errors) {%>
+                <div class="alert alert-danger">
+                    <ul id="errors-list">
+                        <% errors.forEach(function (error){ %>
+                        <br>
+                        <li><%= error.msg %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <% } else if(locals.successMessage) {%>
+                <div class="alert alert-success">
+                    <%= successMessage %>
+                </div>
+                <% } %>
+                <form class="feedback-form" method="POST" action="/contact">
                     <div class="form-group">
                         <label for="feedback-form-name">Name</label>
-                        <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="feedback-form-name" name="name"
+                            placeholder="Enter your name">
                     </div>
                     <div class="form-group">
                         <label for="feedback-form-email">E-Mail</label>
-                        <input type="text" class="form-control" id="feedback-form-email"
+                        <input type="text" class="form-control" id="feedback-form-email" name="email"
                             placeholder="Enter your email address">
                     </div>
                     <div class="form-group">
                         <label for="feedback-form-title">Title</label>
-                        <input type="text" class="form-control" id="feedback-form-title"
+                        <input type="text" class="form-control" id="feedback-form-title" name="title"
                             placeholder="Title of your message">
                     </div>
                     <div class="form-group">
                         <label for="feedback-form-message">Message</label>
                         <textarea type="text" placeholder="Enter your message, then hit the submit button"
-                            class="form-control" id="feedback-form-message" rows="6"></textarea>
+                            class="form-control" id="feedback-form-message" rows="6" name="message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-secondary float-right">Submit</button>
                 </form>
